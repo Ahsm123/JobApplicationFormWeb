@@ -1,88 +1,76 @@
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Job Application Form</title>
+    <link rel="stylesheet" type="text/css" href="site.css" />
 </head>
 <body>
 
-    <form action="https://www.formsreceiver.codesamples.dk" method="post" enctype="multipart/form-data">
-        <table>
-            <tr>
-                <td><label for="fullName">Name:</label></td>
-                <td><input type="text" id="fullName" name="fullName" required /></td>
-            </tr>
-            <tr>
-                <td><label for="emailAddress">Email:</label></td>
-                <td><input type="email" id="emailAddress" name="emailAddress" required /></td>
-            </tr>
-            <tr>
-                <td><label for="userPassword">Password:</label></td>
-                <td><input type="password" id="userPassword" name="userPassword" required /></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><i>Check all that apply</i></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="checkbox" id="interestCoding" name="jobInterests[]" value="Coding">
-                    <label for="interestCoding">Coding</label>
-                </td>
-            </tr>
-            <tr>
-                <td>Job areas of interest</td>
-                <td>
-                    <input type="checkbox" id="interestTesting" name="jobInterests[]" value="Testing">
-                    <label for="interestTesting">Testing</label>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="checkbox" id="interestDebugging" name="jobInterests[]" value="Debugging">
-                    <label for="interestDebugging">Debugging</label>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="checkbox" id="interestProjectManagement" name="jobInterests[]" value="Project management">
-                    <label for="interestProjectManagement">Project management</label>
-                </td>
-            </tr>
-            <tr>
-                <td>Flexibility in work hours</td>
-                <td>
-                    <input type="radio" id="regularWorkWeek" name="workFlexibility" value="regularWorkWeek">
-                    <label for="regularWorkWeek">Regular work week</label>
-                    <br>
-                    <input type="radio" id="someFlexibility" name="workFlexibility" value="someFlexibility">
-                    <label for="someFlexibility">Some flexibility</label>
-                    <br>
-                    <input type="radio" id="work247" name="workFlexibility" value="work247">
-                    <label for="work247">24/7</label>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="applicationText">Write a short application (max 250 characters):</label></td>
-                <td>
-                    <textarea id="applicationText" name="applicationText" rows="4" cols="50" maxlength="250" placeholder="Write your application here..."></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="uploadImage">Upload a picture:</label></td>
-                <td>
-                    <input type="file" id="uploadImage" name="uploadImage" accept="image/*">
-                </td>
-            </tr>
-            <tr>
-                <td><button type="submit">Submit</button></td>
-                <td></td>
-            </tr>
-        </table>
+    <form id="jobApplicationForm" action="https://www.formsreceiver.codesamples.dk" method="post" enctype="multipart/form-data">
+
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name: </label>
+            <input id="name" name="name" type="text" required><br>
+
+            <label for="emailAddress">Email:</label>
+            <input type="email" id="emailAddress" name="emailAddress" required /><br>
+
+            <label for="userPassword">Password:</label>
+            <input type="password" id="userPassword" name="userPassword" required /><br>
+        </fieldset>
+
+        <!-- Job Interests Section -->
+        <fieldset>
+            <legend>Job Interests</legend>
+            <i>Check all that apply</i><br>
+            <input type="checkbox" id="interestCoding" name="jobInterests[]" value="Coding">
+            <label for="interestCoding">Coding</label><br>
+
+            <input type="checkbox" id="interestTesting" name="jobInterests[]" value="Testing">
+            <label for="interestTesting">Testing</label><br>
+
+            <input type="checkbox" id="interestDebugging" name="jobInterests[]" value="Debugging">
+            <label for="interestDebugging">Debugging</label><br>
+
+            <input type="checkbox" id="interestProjectManagement" name="jobInterests[]" value="Project management">
+            <label for="interestProjectManagement">Project management</label><br>
+        </fieldset>
+
+        <!-- Work Flexibility Section -->
+        <fieldset>
+            <legend>Flexibility in Work Hours</legend>
+            <input type="radio" id="regularWorkWeek" name="workFlexibility" value="regularWorkWeek">
+            <label for="regularWorkWeek">Regular work week</label><br>
+
+            <input type="radio" id="someFlexibility" name="workFlexibility" value="someFlexibility">
+            <label for="someFlexibility">Some flexibility</label><br>
+
+            <input type="radio" id="work247" name="workFlexibility" value="work247">
+            <label for="work247">24/7</label><br>
+        </fieldset>
+
+        <!-- Application Text Section -->
+        <fieldset>
+            <legend>Application</legend>
+            <label for="applicationText">Write a short application (max 250 characters):</label><br>
+            <textarea id="applicationText" name="applicationText" rows="4" cols="50" maxlength="250" placeholder="Write your application here..."></textarea>
+        </fieldset>
+
+        <!-- Upload Section -->
+        <fieldset>
+            <legend>Upload Picture</legend>
+            <label for="uploadImage">Upload a picture:</label>
+            <input type="file" id="uploadImage" name="uploadImage" accept="image/*">
+        </fieldset>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
     </form>
+
+    <script src="site.js"></script> <!-- Link to external JS file -->
 </body>
 </html>
